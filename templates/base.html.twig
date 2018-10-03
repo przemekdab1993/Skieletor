@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="descripcion" content="" />
+		<meta name="keywords" content="" />
+		<meta http-equiv="X-UA-Compatiable" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=0.8">
+
+		<link rel="stylesheet" href="{{ asset('build/css/bootstrap.min.css') }}" type="text/css" />
+		<link rel="stylesheet" href="{{ asset('build/css/base_style.css') }}" type="text/css" />
+
+		<script type="text/javascript" src="{{ asset('build/javascript/jquery-3.3.1.min.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('build/javascript/bootstrap.min.js') }}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+			integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+        <title>Welcome! {{ the_title }}</title>
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+		<header>
+			<div class="logo_container d-none d-sm-block">
+				<div class="">
+					<h1>Skieletor</h1>
+				</div>
+			</div>
+			<nav class="navbar navbar-expand-sm bg-warning navbar-light sticky-top">
+				<a class="navbar-brand d-sm-none" href="#">Skieletor</a>
+
+				<!-- Toggler/collapsibe Button -->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="collapsibleNavbar">
+					<ul class="navbar-nav mx-auto">
+						<li class="nav-item mx-3">
+							<a class="nav-link" href="{{ path('skieletor') }}">Home</a>
+						</li>
+						<li class="nav-item mx-3">
+							<a class="nav-link" href="#">Magazyn</a>
+						</li>
+						<li class="nav-item mx-3 dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Opcje</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Link 1</a>
+								<a class="dropdown-item" href="#">Link 2</a>
+								<a class="dropdown-item" href="#">Link 3</a>
+							</div>
+						</li>
+						<li class="nav-item mx-3">
+							<a class="nav-link" href="{{ path('login') }}">Login</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+        {% block body %}
+		{% endblock %}
+		
+        {% block javascripts %}
+		{% endblock %}
     </body>
 </html>

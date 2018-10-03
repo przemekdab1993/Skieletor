@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<div class="form_container">
+		<form action="{{ path('home')}}" method="post" >
+			<input class="form-item bg-warning" type="text" name="tekst1" />
+			<input type="submit" value="Logowanie"  />
+		</form>
+	</div>   
+
+{% endblock %}
