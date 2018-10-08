@@ -1,0 +1,86 @@
+/* STYLE DO BAZY STRONY */
+
+body
+{
+	background-color:  #331a00;
+	color: #fff;
+	margin: 0px;
+	font-size: 18px;
+}
+a
+{
+	text-decoration: none;
+	display: block;
+	color: #fff;
+}
+span.gold
+{
+	color: #ffcc00;
+}
+span.red_span
+{
+	color: red;
+}
+#logo
+{
+	width: 80%;
+	margin: 10px auto 0px auto;
+	height: 60px;
+	background-color: #006600;
+	border-radius: 20px;
+	padding: 20px;
+	font-weight: 900;
+}
+#text_logo
+{
+	margin-left: 6%;
+	font-size: 56px;
+}
+#menu 
+{
+	width: 100%;
+	margin-top: 16px;
+	text-align: center;
+	border-top: 8px double #004d00;
+}
+#menu ul
+{
+	margin: 0px;
+	padding: 0px;
+	background-color: #006600;
+	font-size: 20px;
+}
+#menu ul li
+{
+	list-style-type: none;
+	display: inline-block;
+}
+#menu a
+{
+	padding:10px 40px;
+	transition: background-color 1.6s, color 0.5s;
+}
+#menu  a:hover
+{
+	background-color: #003300;
+	color: #ffcc00;
+}
+#main_container
+{
+	max-width: 1200px;
+	min-width: 880px;
+	width: 80%;
+	min-height: 400px;
+	margin: 30px auto 0px auto;
+}
+.sorce_container
+{
+	padding: 40px;
+	text-align: center;
+	border-radius: 12px;
+	background-color: #006600;
+}
+footer
+{
+	text-align: center;
+}

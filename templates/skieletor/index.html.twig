@@ -1,12 +1,17 @@
+{#		STRONA GŁÓWNA DLA NIEZALOGOWANEGO UŻYTKOWNIKA	 #}
+
 {% extends 'base.html.twig' %}
 
-{% block body %}
-
-
-<div class="example-wrapper">
-    <h1>Hello {{ the_title }}! ✅</h1>
-
-    
-    
-</div>
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('build/css/admin.css') }}" type="text/css" />
+{% endblock %}
+	
+{% block main %}
+	
+	<div class="index_container">
+		<div class="info">
+			<h1>Witaj na naszej stronie internetowej {{ the_title }}</h1><br />
+		</div>
+	</div>
+	
 {% endblock %}

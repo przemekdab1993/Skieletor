@@ -1,0 +1,33 @@
+.index_container
+{
+	padding: 40px;
+	background-color: rgba(255, 255, 255, 0.4);
+}
+.form_log
+{
+	width: 480px;
+	margin: 30px auto;
+	padding: 60px;
+	background-color: red;
+	border: 2px solid blue;
+}
+.form_log label
+{
+	width: 150px;
+}
+.form_log input[type=text], .form_log input[type=password]
+{
+	width: 200px;
+	display: inline-block;
+}
+.form_log [type=submit]
+{
+	color: red;
+	margin: 14px auto;
+	width: 200px;
+	display: block;
+}
+.form-group
+{
+	margin: 6px 0px;
+}
