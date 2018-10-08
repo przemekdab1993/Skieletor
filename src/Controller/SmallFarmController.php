@@ -21,10 +21,10 @@ use Doctrine\DBAL\Driver\Connection;
 #	use Symfony\Component\EventDispatcher\GenericEvent;
 #	use Symfony\Component\HttpFoundation\Response;
 
-class SkieletorController extends AbstractController
+class SmallFarmController extends AbstractController
 {
     /**
-     * @Route("/skieletor", name="skieletor")
+     * @Route("/SmallFarm", name="SmallFarm")
      */
     public function index()
     {
@@ -35,22 +35,22 @@ class SkieletorController extends AbstractController
 		}
 		else
 		{
-			return $this->render('skieletor/index.html.twig', [
-				'the_title' => "Skieletor",
+			return $this->render('small_farm/index.html.twig', [
+				'the_title' => "Small Farm",
 				'the_log' => "Login"
 			]);
 		}
     }
 	
 	/**
-     * @Route("/skieletor/login", name="login")
+     * @Route("/SmallFarm/login", name="login")
      */
     public function login()
     {	
 		$session = new Session;
 		if($session->has('loged') == false)
 		{
-			return $this->render('skieletor/login.html.twig', 
+			return $this->render('small_farm/login.html.twig', 
 				['the_title' => "Logowanie", 
 				'the_log' => "Login"
 			]);
@@ -58,7 +58,7 @@ class SkieletorController extends AbstractController
 		else
 		{
 			$session->clear();
-			return $this->render('skieletor/index.html.twig', 
+			return $this->render('small_farm/index.html.twig', 
 				['the_title' => 'Wylogowałeś się', 
 				'the_log' => "Logout"
 			]);
@@ -70,7 +70,7 @@ class SkieletorController extends AbstractController
 		$session = new Session;
 		if($session->has('loged') == false)
 		{
-			return $this->render('skieletor/login.html.twig', ['the_title' => 'Logowanie', 'the_log' => "Login" ]);
+			return $this->render('small_farm/login.html.twig', ['the_title' => 'Logowanie', 'the_log' => "Login" ]);
 		}
 		else
 		{
@@ -78,7 +78,7 @@ class SkieletorController extends AbstractController
 		}
 	}
 	/**
-     * @Route("/skieletor/login_pass", name="login_pass", methods={"POST",})
+     * @Route("/SmallFarm/login_pass", name="login_pass", methods={"POST",})
      */
     public function login_pass(Request $request, Connection $connection)
     {
@@ -98,14 +98,14 @@ class SkieletorController extends AbstractController
 			$session->set('id_user', $ser[0]['id']);
 			
 			$connection->close();
-			return $this->render('skieletor/game/home.html.twig', [
+			return $this->render('small_farm/game/home.html.twig', [
 				'the_title' => "Small Farm",
 				'the_log' => "Logout"
 			]);
 		}
 		else
 		{
-			return $this->render('skieletor/login.html.twig', [
+			return $this->render('small_farm/login.html.twig', [
 				'the_title' => "Niepowodzenie logowania",
 				'the_log' => "Login"
 			]);
@@ -113,31 +113,31 @@ class SkieletorController extends AbstractController
     }
 	
 	/**
-     * @Route("/skieletor/home", name="home", methods={"POST",})
+     * @Route("/SmallFarm/home", name="home", methods={"POST",})
      */
     public function home()
 	{
-        return $this->render('skieletor/index.html.twig', [
+        return $this->render('small_farm/game/home.html.twig', [
             'the_title' => 'Jesteś zalogowany',
 			'the_log' => "Logout"
 		]);
     }
 	/**
-     * @Route("/skieletor/inventory", name="inventory")
+     * @Route("/SmallFarm/inventory", name="inventory")
      */
     public function inventory()
 	{
-        return $this->render('skieletor/game/inventory.html.twig', [
+        return $this->render('small_farm/game/inventory.html.twig', [
             'the_title' => 'Jesteś zalogowany',
 			'the_log' => "Logout"
 		]);
     }
 	/**
-     * @Route("/skieletor/registration", name="registration")
+     * @Route("/SmallFarm/registration", name="registration")
      */
     public function registration()
 	{
-        return $this->render('skieletor/registration.html.twig', [
+        return $this->render('small_farm/registration.html.twig', [
             'the_title' => 'Jesteś zalogowany',
 			'the_log' => "Logout"
 		]);
