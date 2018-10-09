@@ -11,7 +11,11 @@
 	<div class="sorce_container">
 		<div id="background_game">
 			<div id="field">
-				{# {% for krotka in the_src_base %}<div class="field_box" id="f{{ krotka[1] }}"><img src="static/{{ krotka[8] }}" /></div>{% endfor %} #}
+				{% for krotka in the_res %}
+					<div class="field_box" id="f{{ krotka['krotka_ID'] }}"><img src="{{ asset('build/img/trawa0.png') }}" /></div>
+				{% else %}
+					error
+				{% endfor %}
 				
 			</div>
 		</div>

@@ -1,0 +1,17 @@
+{#		Alert	 #}
+
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('build/css/admin.css') }}" type="text/css" />
+{% endblock %}
+	
+{% block main %}
+	
+	<div class="index_container">
+		<div class="info">
+			<h2>{{ the_alert }}</h2>
+		</div>
+	</div>
+	
+{% endblock %}

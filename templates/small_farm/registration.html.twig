@@ -5,7 +5,7 @@
 {% block main %}
 
 	<div class="sorce_container">
-		<form method="POST" action="/adduser">
+		<form action="{{ path('adduser') }}" method="POST">
 			<legend><h1>Rejestracja:</h1></legend>
 			<label for="user_name">User Name:</label>
 			<input type="text" name="user_name" id="user_name" /> <span class="red_span" id="span_user_name"></span><br />
